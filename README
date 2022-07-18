@@ -5,10 +5,34 @@ al posto del codecommit uso la repository di github
 salto la parte di build
 faccio direttamente codedeploy
 
-il mio rds si chiama "LuchiniChiaraEsameFin1" perchè ne avevo già creato uno, ma non mi si connetteva.
 
 2.5:
 - una macchina ec2 
+- un'immagine
+- con l'immagine ho creato un autoscaling group :
+    - con 2 macchine come minimo (se vengono terminate vengono ricreate in automatico) -> mi da connessione rifiutata
+    - un load balancing
 - un rds
 - una pipeline (Descritta sopra)
-- 
+
+
+----
+
+HTTPS-> si nota da subito che non c'è un certificato ssl e quindi non c'è la possibilità di https.
+
+xss -> serve per rubare dati personali attraverso degli input. lo script dannoso viene azionato ogni volta che l'utente richiama una certa funzionalità.
+es:  inserire <script>alert()</script> durante l'inserimento di un nuovo valore;
+per fare in modo che questo non avvenga ci devono inserire dei controlli a livello fe e be che impediscano di inserire html e js (esistono molte librerie per fare questo)
+
+
+sql injection: serve per iniettare codice dannoso direttamente nel db
+
+nel campo text: posso inderire dell'html e del js
+nel campo number: posso bypassare il controllo dei numeri (cioè posso forzrgli un testo, quindi devo fare un controllo anche nel be) 
+nella selection: con Barpsuite posso forzare e inserire del js. vanno fatti dei controlli del db che impediscano il salvataggio di cose dannose nel db.
+
+sqlmap e BURP: tools che permettono di identificare delle vulnerabilità a SQL injection
+
+es: inserire ' OR '1'='1 durante una ricerca, e si visualizzeranno tutti i dati presenti nella tabella. 
+
+Anche qua la prima miglioria da fare sono dei controlli sugli input a livello di fe e be. (esistono delle libreria apposta)

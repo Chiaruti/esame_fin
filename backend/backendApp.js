@@ -47,8 +47,8 @@ app.get('/', (req, res) => {
             <option>Germany</option>
             </select>           
           </div><br>
-          <button>INSERISCI DATI</button>&nbsp;
-          <button><a style='color:#FFFFFF' href=/find>CERCA</a></button>&nbsp;
+          <button>INSERISCI DATI</button>;
+          <button><a style='color:#FFFFFF' href=/find>CERCA</a></button>;
           <button><a style='color:#FFFFFF' href=/list>VISULIZZA TUTTI</a></button>
         </form>
       </body>
@@ -61,7 +61,7 @@ app.post('/save', (req, res) => {
     const enteredNumber = req.body.anum;
     const enteredCountry = req.body.country
     console.log('valori inseriti: ' + enteredText + ',' + enteredNumber + ',' + enteredCountry);
-    const url = "/";
+    var url = "/";
     formInput = enteredText + ' - ' + enteredNumber + ' - ' + enteredCountry;
 
 
@@ -102,7 +102,7 @@ app.get("/list", async(req, res) => {
       <h2>ESAME FINALE ITS: corso DEVO</h2>
       <h3>Elenco record inseriti</h3>
        ${myresult}
-       <button><a style='color:#FFFFFF' href=/>HOME</a></button>&nbsp;
+       <button><a style='color:#FFFFFF' href=/>HOME</a></button>;
        <button><a style='color:#FFFFFF' href=/find>CERCA</a></button>
       
     </section>
@@ -128,8 +128,8 @@ app.get("/find", async(req, res) => {
           <label>Testo di ricerca (nome)</label>
           <input type="text" name="astring">
         </div>
-        <button>Cerca</button>&nbsp;
-        <button><a style='color:#FFFFFF' href=/>HOME</a></button>&nbsp;
+        <button>Cerca</button>;
+        <button><a style='color:#FFFFFF' href=/>HOME</a></button>;
         <button><a style='color:#FFFFFF' href=/list>VISULIZZA TUTTI</a></button>
       </form>
     </body>
@@ -162,7 +162,7 @@ app.post('/mysearch', async(req, res) => {
       <h2>ESAME FINALE ITS: corso DEVO<</h2>
       <h3>RISULTATO DELLA RICERCA per ${enteredText}</h3>
        ${myresult}
-      <button><a style='color:#FFFFFF' href=/>HOME</a></button>&nbsp;
+      <button><a style='color:#FFFFFF' href=/>HOME</a></button>;
       <button><a style='color:#FFFFFF' href=/find>FAI UN'ALTRA RICERCA</a></button>
       <button><a style='color:#FFFFFF' href=/list>VISULIZZA TUTTI</a></button>
 
