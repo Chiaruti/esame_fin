@@ -4,3 +4,9 @@ ho aggiunto gli script nell'applicazione
 al posto del codecommit uso la repository di github 
 salto la parte di build
 faccio direttamente codedeploy
+
+il mio rds si chiama "LuchiniChiaraEsameFin1" perchè ne avevo già creato uno, ma non mi si connetteva.
+
+2.5:
+- una macchina ec2 
+- un rds
