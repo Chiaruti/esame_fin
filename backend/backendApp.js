@@ -68,7 +68,7 @@ app.post('/save', (req, res) => {
     pool.query(
         "INSERT INTO prova(nome, numero, country)VALUES('" + enteredText + "','" + enteredNumber + "','" + enteredCountry + "')",
         (err, res) => {
-            const errorMessage = "";
+            var errorMessage = "";
             if (err) {
                 errorMessage = "Insertion in db failed";
             }
