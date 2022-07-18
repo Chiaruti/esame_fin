@@ -1,0 +1,6 @@
+AWS:
+ho aggiunto gli script nell'applicazione
+
+al posto del codecommit uso la repository di github 
+salto la parte di build
+faccio direttamente codedeploy
